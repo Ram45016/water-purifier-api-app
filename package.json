@@ -1,6 +1,7 @@
 {
   "name": "water-purifier-full-api-admin",
   "version": "1.0.0",
+  "type": "module",
   "main": "api/index.js",
   "scripts": {
     "dev": "vercel dev",
@@ -15,7 +16,7 @@
     "express": "^4.19.2",
     "joi": "^17.13.3",
     "jsonwebtoken": "^9.0.0",
-    "nanoid": "^5.0.7",
+    "nanoid": "^3.3.11",
     "pg": "^8.11.5"
   }
 }
