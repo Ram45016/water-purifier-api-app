@@ -1,7 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 const pool = require('../db');
-const bcrypt = require('bcrypt');
+const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const Joi = require('joi');
 const { nanoid } = require('nanoid');
@@ -46,6 +46,7 @@ app.post(AUTH_PREFIX + '/login', async (req, res) => {
   } catch (err) { console.error(err); res.status(500).json({ error: 'Server error' }); }
 });
 
+// Protected: create product
 app.post(API_PREFIX + '/products', requireAuth, async (req, res) => {
   const schema = Joi.object({
     id: Joi.string().optional(),
